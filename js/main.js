@@ -37,7 +37,6 @@ var churchIcon = L.icon({
 
 
 entities.forEach((entity) => {
-    // Obtén el icono correcto basado en la propiedad icon
     const markerIcon = getIcon(entity.icon);
 
     L.marker(entity.location, { icon: markerIcon }).addTo(map)
@@ -57,8 +56,7 @@ function getIcon(iconName) {
         case 'church-icon':
             return churchIcon;
         default:
-            // Puedes devolver un icono por defecto o manejar el caso de icono no encontrado
-            return libraryIcon; // Ajusta según tu preferencia
+            return libraryIcon;
     }
 }
 
