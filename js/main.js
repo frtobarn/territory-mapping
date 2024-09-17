@@ -1,10 +1,10 @@
 import { tunjuelitoGeometry } from "./geometries.js";
 import { entities } from "./points.js";
-var map = L.map('map').setView([4.572038, -74.129444], 15);
+var map = L.map('map').setView([4.572038, -74.129444], 14);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+// L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// }).addTo(map);
 
 var polygon = L.polygon(tunjuelitoGeometry, {
     color: 'red',

@@ -5,9 +5,18 @@
 }
 
 #title {
+    background-color: blueviolet;
     height: 10vh;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
 }
 
 #map {
     height: 90vh;
+}
+
+h1 {
+    margin: auto;
+    color: azure;
 }
