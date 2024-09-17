@@ -8,15 +8,35 @@
     background-color: blueviolet;
     height: 10vh;
     text-align: center;
-    justify-content: center;
-    vertical-align: middle;
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
 }
 
 #map {
     height: 90vh;
 }
 
-h1 {
-    margin: auto;
+#title h1 {
+    margin: 0; /* Elimina el margen por defecto */
     color: azure;
+}
+
+#title span {
+    margin: auto;
+    color: rgb(32, 46, 17);
+}
+
+/* Estilo para pantallas móviles */
+@media screen and (max-width: 768px) {
+    #title {
+        height: 5vh;
+    }
+    #map {
+        height: 95vh;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
 }
