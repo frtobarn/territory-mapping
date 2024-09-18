@@ -8,9 +8,12 @@
     background-color: blueviolet;
     height: 10vh;
     text-align: center;
-    display: flex; /* Usa flexbox */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    display: flex;
+    /* Usa flexbox */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
 }
 
 #map {
@@ -18,20 +21,30 @@
 }
 
 #title h1 {
-    margin: 0; /* Elimina el margen por defecto */
+    margin: 0;
+    /* Elimina el margen por defecto */
     color: azure;
 }
 
-#title span {
+#title span a {
     margin: auto;
     color: rgb(32, 46, 17);
 }
 
 /* Estilo para pantallas móviles */
 @media screen and (max-width: 768px) {
+
+    html,
+    body,
+    #map {
+        height: 100%;
+        width: 100vw;
+    }
+
     #title {
         height: 5vh;
     }
+
     #map {
         height: 95vh;
     }
