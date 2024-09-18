@@ -1,6 +1,6 @@
 import { leftPolygon, rightPolygon, tunjuelitoPolygon } from "./polygons.js";
 import { churchIcon, libraryIcon, parkIcon } from "./icons.js";
-import { entities } from "./points.js";
+import { entities, entitiesGEOJSON } from "./points.js";
 
 // Setting map view
 var map = L.map('map').fitWorld();//.setView([4.572038, -74.129444], 14);
@@ -24,19 +24,60 @@ tunjuelitoPolygon.addTo(map)
 //     .bindPopup(`[4.572038, -74.129444]`);
 // // alert("You clicked the map at " + e.latlng);
 
-var popup = L.popup()
+var popup = L.popup({ alt: "current popup" })
     .setLatLng([4.572038, -74.129444])
     .setContent("[4.572038, -74.129444]");
 
 entities.forEach((entity) => {
     const markerIcon = getIcon(entity.icon);
-    L.marker(entity.location, { icon: markerIcon }).addTo(map)
+    L.marker(entity.location, {
+        icon: markerIcon,
+        alt: `${entity.name}`
+    }).addTo(map)
         .bindPopup(`
             ${entity.popup_msg}
             <br/>
             <a href="${entity.webpage}" target="_blank">Visitar Web </a>
         `);
 });
+
+
+// Handling with GEO Json
+
+// first way
+// L.geoJSON(entitiesGEOJSON).addTo(map);
+
+// Second way
+// var geojsonMarkerOptions = {
+//     radius: 8,
+//     fillColor: "#ff7800",
+//     color: "#000",
+//     weight: 1,
+//     opacity: 1,
+//     fillOpacity: 0.8
+// };
+
+// L.geoJSON(entitiesGEOJSON, {
+//     pointToLayer: function (feature, latlng) {
+//         return L.circleMarker(latlng, geojsonMarkerOptions);
+//     }
+// }).addTo(map)
+
+
+
+// working way
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent)
+        // layer.setIcon?;
+    }
+}
+
+L.geoJSON(entitiesGEOJSON, {
+    onEachFeature: onEachFeature
+}).addTo(map);
+
 
 // Adding a popup on user´s current location
 function onLocationFound(e) {

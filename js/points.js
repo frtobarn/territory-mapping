@@ -23,5 +23,29 @@ export const entities = [
         icon: "church-icon",
         popup_msg: "Manzana del cuidado Tunjuelito. <br>Para pasarla",
         webpage: "https://manzanasdelcuidado.gov.co/tunjuelito/"
+    },
+    // {
+    //     name: "Casa de la cultura de Tunjuelito",
+    //     location: [4.579115896699781, -74.13659545995138],
+    //     icon: "library-icon",
+    //     popup_msg: "Aqui es donde la cultura nace colectivamente",
+    //     webpage: "https://manzanasdelcuidado.gov.co/tunjuelito/"
+    // }
+]
+
+// GeoJSON Specification (RFC 7946):
+
+export const entitiesGEOJSON = [
+    {
+        "type": "Feature",
+        "properties": {
+            "name": "Casa de la cultura de Tunjuelito",
+            "amenity": "Entidad cultural",
+            "popupContent": "Aqui es donde la cultura nace colectivamente"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-74.13659545995138, 4.579115896699781]
+        }
     }
 ]
