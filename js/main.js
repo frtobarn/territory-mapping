@@ -1,6 +1,8 @@
 import { leftPolygon, rightPolygon, tunjuelitoPolygon } from "./polygons.js";
 import { churchIcon, libraryIcon, parkIcon, poolIcon } from "./icons.js";
-import { entities, entitiesGEOJSON } from "./points.js";
+import { entitiesGEOJSON } from "./points.js";
+import { territoriesGEOJSON } from "./territories.js";
+import { statesData } from "./states.js";
 
 // Setting map view
 var map = L.map("map").fitWorld(); //.setView([4.572038, -74.129444], 14);
@@ -12,33 +14,61 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
     '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
-leftPolygon.addTo(map);
+// leftPolygon.addTo(map);
 // .bindPopup("no - Tunjuelito.");
-rightPolygon.addTo(map);
+// rightPolygon.addTo(map);
 // .bindPopup("no - Tunjuelito.");
-tunjuelitoPolygon.addTo(map);
+// tunjuelitoPolygon.addTo(map);
 // .bindPopup("Tunjuelito.");
 
+function getColor(d) {
+  return d > 1000
+    ? "#800026"
+    : d > 500
+    ? "#BD0026"
+    : d > 200
+    ? "#E31A1C"
+    : d > 100
+    ? "#FC4E2A"
+    : d > 50
+    ? "#FD8D3C"
+    : d > 20
+    ? "#FEB24C"
+    : d > 10
+    ? "#FED976"
+    : "#FFEDA0";
+}
+
+function style(feature) {
+  return {
+    fillColor: getColor(feature.properties.density),
+    weight: 2,
+    opacity: 1,
+    color: "white",
+    dashArray: "3",
+    fillOpacity: 0.7,
+  };
+}
+
+L.geoJson(territoriesGEOJSON, { style: style }).addTo(map);
+
 // Markers
-// var selectedPoint = L.marker([4.572038, -74.129444]).addTo(map)
-//     .bindPopup(`[4.572038, -74.129444]`);
-// // alert("You clicked the map at " + e.latlng);
 
 var popup = L.popup({ alt: "current popup" })
   .setLatLng([4.572038, -74.129444])
   .setContent("[4.572038, -74.129444]");
 
-entities.forEach((entity) => {
-  const markerIcon = getIcon(entity.icon);
-  L.marker(entity.location, {
-    icon: markerIcon,
-    alt: `${entity.name}`,
-  }).addTo(map).bindPopup(`
-            ${entity.popup_msg}
-            <br/>
-            <a href="${entity.webpage}" target="_blank">Visitar Web </a>
-        `);
-});
+// entities.forEach((entity) => {
+//   const markerIcon = getIcon(entity.icon);
+//   L.marker(entity.location, {
+//     icon: markerIcon,
+//     alt: `${entity.name}`,
+//   }).addTo(map).bindPopup(`
+//             ${entity.popup_msg}
+//             <br/>
+//             <a href="${entity.webpage}" target="_blank">Visitar Web </a>
+//         `);
+// });
 
 // Handling with GEO Json
 
