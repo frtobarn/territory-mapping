@@ -44,7 +44,7 @@ map.on("locationfound", (e) => onLocationFound(e, map));
 map.on("locationerror", onLocationError);
 
 // Click event function - moving popup
-var popup = L.popup({ alt: "current popup" })
+const popup = L.popup({ alt: "current popup" })
   .setLatLng([4.572038, -74.129444])
   .setContent("[4.572038, -74.129444]");
 
