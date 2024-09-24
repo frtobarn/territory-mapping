@@ -1,19 +1,4 @@
-// [4.595686896849149, -74.1522637029999] nort
-// [4.544489566850838, -74.1238684409999] south
-
-export const entities = [
-  //   {
-  //     name: "CEFE Tunal",
-  //     location: [4.571837, -74.138357],
-  //     icon: "park-icon",
-  //     popup_msg: "CEFE. <br>Para nadar",
-  //     webpage:
-  //       "https://www.idrd.gov.co/construcciones/centros-felicidad-bogota/cefe-tunal",
-  //   },
-];
-
 // GeoJSON Specification (RFC 7946):
-
 export const entitiesGEOJSON = [
   {
     type: "Feature",
