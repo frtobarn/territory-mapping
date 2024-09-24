@@ -1,8 +1,8 @@
 // Resources and geojson data
 import { entitiesGEOJSON } from "./entities.js";
 import { territoriesGEOJSON } from "./territories.js";
-import { onLocationFound, onLocationError } from "./location.js";
 import { territoriesStyle, getIcon } from "./styles.js";
+import { onLocationFound, onLocationError } from "./location.js";
 
 // Setting map view
 var map = L.map("map").setView([4.572038, -74.129444], 14); //.fitWorld();
