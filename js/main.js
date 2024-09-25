@@ -51,6 +51,6 @@ const popup = L.popup({ alt: "current popup" })
 function onPoligonClick(e) {
   popup
     .setLatLng(e.latlng)
-    .setContent("You clicked the map at " + e.latlng.toString())
+    .setContent("[" + e.latlng.lat + ", " + e.latlng.lng + "]")
     .openOn(map);
 }
