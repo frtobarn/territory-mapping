@@ -15,13 +15,13 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 // My territories layers
-L.geoJson(territoriesGEOJSON, {
+var territories = L.geoJson(territoriesGEOJSON, {
   style: territoriesStyle,
   attribution:
     '&copy; <a href="https://fabiantobar.vercel.app/" target="_blank" rel="noopener noreferrer">Fabian Ricardo Tobar Numesqui</a>',
-})
-  .addTo(map)
-  .on("click", onPoligonClick);
+  onEachFeature: onEachFeature,
+}).addTo(map);
+// .on("click", onPoligonClick); // Moving popup
 
 // Markers
 L.geoJSON(entitiesGEOJSON, {
@@ -30,13 +30,48 @@ L.geoJSON(entitiesGEOJSON, {
     return L.marker(latlng, {
       icon: markerIcon,
       alt: `${feature.properties.alt}`,
-    }).addTo(map).bindPopup(`
+    }).bindPopup(`
             ${feature.properties.popupContent}
             <br/>
             <a href="${feature.properties.webpage}" target="_blank">Visitar Web </a>
         `);
   },
 }).addTo(map);
+
+//Adding layer's interactions
+//mouseover
+function highlightFeature(e) {
+  var layer = e.target;
+  // console.log(layer.feature.properties.name)
+
+  layer.setStyle({
+    weight: 5,
+    color: "#666",
+    dashArray: "",
+    fillOpacity: 0.7,
+  });
+  layer.feature.properties.name != "Santafe" ? layer.bringToFront() : null;
+}
+//mouseout
+function resetHighlight(e) {
+  var layer = e.target;
+  territories.resetStyle(layer);
+
+  layer.feature.properties.name != "La Candelaria" ? layer.bringToBack() : null;
+}
+//click listener that zooms to the feature
+function zoomToFeature(e) {
+  map.fitBounds(e.target.getBounds());
+}
+
+//onEachFeature option to add the listeners on our layers:
+function onEachFeature(feature, layer) {
+  layer.on({
+    mouseover: highlightFeature,
+    mouseout: resetHighlight,
+    click: zoomToFeature,
+  });
+}
 
 // Location events
 map.locate({ setView: true, maxZoom: 13 });
