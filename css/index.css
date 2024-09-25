@@ -1,55 +1,67 @@
 * {
-    gap: 0;
-    margin: 0;
-    padding: 0;
+  gap: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #title {
-    background-color: blueviolet;
-    height: 10vh;
-    text-align: center;
-    display: flex;
-    /* Usa flexbox */
-    align-items: center;
-    /* Centra verticalmente */
-    justify-content: center;
-    /* Centra horizontalmente */
+  background-color: blueviolet;
+  height: 10vh;
+  text-align: center;
+  display: flex;
+  /* Usa flexbox */
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
 }
 
 #map {
-    height: 90vh;
+  height: 90vh;
 }
 
 #title h1 {
-    margin: 0;
-    /* Elimina el margen por defecto */
-    color: azure;
+  margin: 0;
+  /* Elimina el margen por defecto */
+  color: azure;
 }
 
 #title span a {
-    margin: auto;
-    color: rgb(32, 46, 17);
+  margin: auto;
+  color: rgb(32, 46, 17);
+}
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
 }
 
 /* Estilo para pantallas móviles */
 @media screen and (max-width: 768px) {
+  html,
+  body,
+  #map {
+    height: 100%;
+    width: 100vw;
+  }
 
-    html,
-    body,
-    #map {
-        height: 100%;
-        width: 100vw;
-    }
+  #title {
+    height: 5vh;
+  }
 
-    #title {
-        height: 5vh;
-    }
+  #map {
+    height: 95vh;
+  }
 
-    #map {
-        height: 95vh;
-    }
-
-    h1 {
-        font-size: 14px;
-    }
+  h1 {
+    font-size: 14px;
+  }
 }

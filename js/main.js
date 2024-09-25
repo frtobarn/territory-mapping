@@ -18,12 +18,13 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 var territories = L.geoJson(territoriesGEOJSON, {
   style: territoriesStyle,
   attribution:
-    '&copy; <a href="https://fabiantobar.vercel.app/" target="_blank" rel="noopener noreferrer">Fabian Ricardo Tobar Numesqui</a>',
+    '&copy; <a href="https://fabiantobar.vercel.app/" target="_blank" rel="noopener noreferrer">' +
+    "Fabian Ricardo Tobar Numesqui</a>",
   onEachFeature: onEachFeature,
 }).addTo(map);
 // .on("click", onPoligonClick); // Moving popup
 
-// Markers
+// Markers--------------------------------------------------------------------------------------
 L.geoJSON(entitiesGEOJSON, {
   pointToLayer: function (feature, latlng) {
     const markerIcon = getIcon(feature.properties.icon);
@@ -38,12 +39,11 @@ L.geoJSON(entitiesGEOJSON, {
   },
 }).addTo(map);
 
-//Adding layer's interactions
+//Adding layer's interactions------------------------------------------------------------------
 //mouseover
 function highlightFeature(e) {
   var layer = e.target;
   // console.log(layer.feature.properties.name)
-
   layer.setStyle({
     weight: 5,
     color: "#666",
@@ -51,6 +51,9 @@ function highlightFeature(e) {
     fillOpacity: 0.7,
   });
   layer.feature.properties.name != "Santafe" ? layer.bringToFront() : null;
+
+  // Update info custom control
+  info.update(layer.feature.properties);
 }
 //mouseout
 function resetHighlight(e) {
@@ -58,6 +61,9 @@ function resetHighlight(e) {
   territories.resetStyle(layer);
 
   layer.feature.properties.name != "La Candelaria" ? layer.bringToBack() : null;
+
+  // Update info custom control
+  info.update();
 }
 //click listener that zooms to the feature
 function zoomToFeature(e) {
@@ -72,6 +78,30 @@ function onEachFeature(feature, layer) {
     click: zoomToFeature,
   });
 }
+
+// Info custom control------------------------------------------------------------------
+var info = L.control();
+
+info.onAdd = function (map) {
+  this._div = L.DomUtil.create("div", "info"); // create a div with a class "info"
+  this.update();
+  return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+  this._div.innerHTML =
+    "<h4>Entidades en tunjuelito</h4>" +
+    (props
+      ? "<b>" +
+        props.name +
+        "</b><br />" +
+        props.density +
+        " people / mi<sup>2</sup>"
+      : "Pasa el mouse por una zona");
+};
+
+info.addTo(map);
 
 // Location events
 map.locate({ setView: true, maxZoom: 13 });
