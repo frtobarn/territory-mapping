@@ -2,15 +2,15 @@ import { churchIcon, libraryIcon, parkIcon, poolIcon } from "./icons.js";
 
 // Applying color according to a property
 export function getColorByDensity(d) {
-  return d > 1000
+  return d > 300
     ? "#800026"
-    : d > 500
+    : d > 250
     ? "#BD0026"
-    : d > 200
+    : d > 160
     ? "#E31A1C"
-    : d > 100
+    : d > 80
     ? "#FC4E2A"
-    : d > 50
+    : d > 40
     ? "#FD8D3C"
     : d > 20
     ? "#FEB24C"
@@ -21,12 +21,12 @@ export function getColorByDensity(d) {
 
 export function territoriesStyle(feature) {
   return {
-    fillColor: getColorByDensity(feature.properties.density),
+    fillColor: getColorByDensity(feature.properties.densidad_urbana),
     weight: 2,
     opacity: 1,
     color: "white",
     dashArray: "3",
-    fillOpacity: 0.5,
+    fillOpacity: 0.8,
   };
 }
 

@@ -1,5 +1,5 @@
 // GeoJSON Specification (RFC 7946):
-export const entitiesGEOJSON = [
+export const librariesGEOJSON = [
   {
     type: "Feature",
     properties: {
@@ -16,6 +16,57 @@ export const entitiesGEOJSON = [
       coordinates: [-74.129444, 4.572038],
     },
   },
+  {
+    type: "Feature",
+    properties: {
+      name: "Biblioteca Pública Virgilio barco",
+      amenity: "Entidad cultural",
+      popupContent: "Biblioteca BV. <br>El corazón de Chapinero",
+      icon: "library-icon",
+      alt: "Texto accesible para lectores de pantallas",
+      webpage:
+        "https://www.biblored.gov.co/bibliotecas/biblioteca-gabriel-garcia-marquez",
+    },
+    geometry: {
+      type: "Point",
+      coordinates: [-74.08916052931596, 4.65717699724864],
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      name: "Biblioteca Pública Tintal Manuel Zapata Olivella",
+      amenity: "Entidad cultural",
+      popupContent: "Biblioteca Tintal MZO. <br>El corazón de Patio",
+      icon: "library-icon",
+      alt: "Texto accesible para lectores de pantallas",
+      webpage:
+        "https://www.biblored.gov.co/bibliotecas/biblioteca-gabriel-garcia-marquez",
+    },
+    geometry: {
+      type: "Point",
+      coordinates: [-74.15454936192528, 4.643978619654996],
+    },
+  },
+  {
+    type: "Feature",
+    properties: {
+      name: "Biblioteca Pública Julio Mario Santodomingo",
+      amenity: "Entidad cultural",
+      popupContent: "Biblioteca JMSD. <br>El corazón de Suba",
+      icon: "library-icon",
+      alt: "Texto accesible para lectores de pantallas",
+      webpage:
+        "https://www.biblored.gov.co/bibliotecas/biblioteca-gabriel-garcia-marquez",
+    },
+    geometry: {
+      type: "Point",
+      coordinates: [-74.06252506969525, 4.7570756112497445],
+    },
+  },
+];
+
+var entitiesGEOJSON = [
   {
     type: "Feature",
     properties: {
