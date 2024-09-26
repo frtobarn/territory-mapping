@@ -13,7 +13,7 @@ export const librariesGEOJSON = [
     },
     geometry: {
       type: "Point",
-      coordinates: [-74.129444, 4.572038],
+      coordinates: [-74.12980215552147, 4.572094915865306],
     },
   },
   {
