@@ -2709,6 +2709,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 2.0,
         nomb_loc: "CHAPINERO",
         cod_upz: "90",
@@ -7530,6 +7531,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 10.0,
         nomb_loc: "ENGATIVA",
         cod_upz: "72",
@@ -9001,6 +9003,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "12",
@@ -14938,6 +14941,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "14",
@@ -15971,6 +15975,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 10.0,
         nomb_loc: "ENGATIVA",
         cod_upz: "73",
@@ -18184,6 +18189,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "25",
@@ -18219,6 +18225,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 13.0,
         nomb_loc: "TEUSAQUILLO",
         cod_upz: "100",
@@ -18537,6 +18544,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "16",
@@ -19300,6 +19308,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 3.0,
         nomb_loc: "SANTA FE",
         cod_upz: "92",
@@ -19879,6 +19888,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "18",
@@ -20266,6 +20276,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "27",
@@ -20331,6 +20342,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 12.0,
         nomb_loc: "BARRIOS UNIDOS",
         cod_upz: "103",
@@ -20374,6 +20386,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 13.0,
         nomb_loc: "TEUSAQUILLO",
         cod_upz: "106",
@@ -23058,6 +23071,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "11",
@@ -23118,6 +23132,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "15",
@@ -24950,6 +24965,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 10.0,
         nomb_loc: "ENGATIVA",
         cod_upz: "74",
@@ -25032,6 +25048,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 13.0,
         nomb_loc: "TEUSAQUILLO",
         cod_upz: "104",
@@ -26211,6 +26228,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "9",
@@ -30615,6 +30633,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 10.0,
         nomb_loc: "ENGATIVA",
         cod_upz: "26",
@@ -31874,6 +31893,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 10.0,
         nomb_loc: "ENGATIVA",
         cod_upz: "29",
@@ -32112,6 +32132,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "2",
@@ -32185,6 +32206,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "20",
@@ -32707,6 +32729,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "71",
@@ -34884,6 +34907,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "10",
@@ -37319,6 +37343,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 10.0,
         nomb_loc: "ENGATIVA",
         cod_upz: "30",
@@ -37807,6 +37832,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "19",
@@ -37866,6 +37892,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 12.0,
         nomb_loc: "BARRIOS UNIDOS",
         cod_upz: "98",
@@ -42087,6 +42114,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 3.0,
         nomb_loc: "SANTA FE",
         cod_upz: "91",
@@ -42999,6 +43027,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "3",
@@ -43145,6 +43174,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "23",
@@ -43771,6 +43801,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "28",
@@ -46000,6 +46031,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 2.0,
         nomb_loc: "CHAPINERO",
         cod_upz: "99",
@@ -47190,6 +47222,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "17",
@@ -47265,6 +47298,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 12.0,
         nomb_loc: "BARRIOS UNIDOS",
         cod_upz: "22",
@@ -47333,6 +47367,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Virgilio Barco",
         cod_loc: 13.0,
         nomb_loc: "TEUSAQUILLO",
         cod_upz: "101",
@@ -49041,6 +49076,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "1",
@@ -51935,6 +51971,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 1.0,
         nomb_loc: "USAQUEN",
         cod_upz: "13",
@@ -52634,6 +52671,7 @@ export const upzGEOJSON = {
         type: "Polygon",
       },
       properties: {
+        biblioteca:"Julio Mario Santodomingo",
         cod_loc: 11.0,
         nomb_loc: "SUBA",
         cod_upz: "24",
